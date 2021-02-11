@@ -503,6 +503,8 @@ export class PerspectiveElement extends StateElement {
             throw e;
         }
 
+        this._status_bar.set_view(this._view);
+
         const timer = this._render_time();
         this._render_count = (this._render_count || 0) + 1;
         if (this._task) {
